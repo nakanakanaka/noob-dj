@@ -1,0 +1,8 @@
+<h1>Edit Customer</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/custs/customer_edit/{{ cust_id }}/" method="post">
+    {% csrf_token %}
+    {{ cust_form.as_p }}
+    <input type="submit" value="Save" />
+</form>
