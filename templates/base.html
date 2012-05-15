@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>{% block title %}Test...{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/screen.css" media="screen" />
+</head>
+<body>
+<div id="header">
+    <p><img src="{{ STATIC_URL }}/static/datsmall.jpg"></img>   Dat App</p>
+</div>
+<div class="colmask leftmenu">
+    <div class="colleft">
+        <div class="col1">
+            {% block content %}
+            <p>Main page stuff</p>
+            <p>Bacon ipsum dolor sit amet cow chicken corned beef, pork loin turkey aute consequat cupidatat jowl aliqua id.  Sunt in venison tri-tip ut turkey.  Consequat tri-tip irure, shankle excepteur duis sirloin shank ad meatball.  Reprehenderit strip steak aute, qui kielbasa occaecat cupidatat tenderloin beef sunt fatback t-bone.  Speck id kielbasa ad in, tri-tip reprehenderit.  Pork loin aliquip magna fatback brisket cow commodo, ball tip incididunt nisi andouille eiusmod pastrami.  Irure short ribs velit duis, excepteur est commodo in.</p><p>Capicola ullamco laborum, pork chop speck in nisi spare ribs prosciutto tongue andouille velit adipisicing reprehenderit.  Do chicken filet mignon laboris drumstick.  Biltong tenderloin capicola leberkas salami, culpa esse beef duis incididunt.  Ullamco adipisicing pork chop pig, venison pork loin quis aliqua turducken sirloin pariatur duis.  Tempor consectetur swine, nulla anim non officia pastrami eu sint ground round tenderloin chuck tri-tip quis.  Adipisicing ham hock t-bone kielbasa pork.  Excepteur short loin consequat mollit adipisicing, bresaola hamburger voluptate exercitation fugiat bacon tenderloin labore.</p><p>Short ribs sed sint t-bone, turducken incididunt cillum tail.  Bresaola ut short ribs veniam ex.  Corned beef mollit drumstick brisket turducken kielbasa commodo capicola.  Enim sausage nisi, shoulder dolor ball tip venison spare ribs tri-tip biltong ut ribeye tongue.</p><p>Labore fugiat ullamco ex pancetta, non ut nulla in deserunt ad drumstick.  Frankfurter adipisicing fugiat ea, beef flank rump.  Voluptate drumstick exercitation short loin ham, frankfurter nostrud anim et proident dolore elit incididunt aliquip turducken.  Nostrud nulla magna eu short ribs, pastrami frankfurter meatball aute rump bresaola minim.  Occaecat ut filet mignon mollit, non tri-tip in laborum adipisicing ex incididunt aute ball tip hamburger flank.  Incididunt bresaola eiusmod, sausage tail capicola labore fatback corned beef consectetur.  Shoulder pariatur consequat, sint pork belly pig voluptate.</p><p>Pork loin short ribs id, sint ut fatback turducken chicken pork chop fugiat.  Qui in nisi irure, turducken flank dolore deserunt t-bone ball tip.  Magna ut velit cow, aute voluptate nisi dolor.  Tenderloin sirloin jerky, officia ullamco duis exercitation pork belly.  Jerky shoulder do speck pork chop, rump drumstick enim capicola tail dolore short ribs excepteur.</p>
+            {% endblock %}
+        </div>
+        <div class="col2">
+            {% block sidebar %}
+            <p><a href="/custs/customers/">Customers</a></p>
+            <p><a href="/custs/suites/">Suites</a></p>
+            <p><a href="/custs/bookings/">Bookings</a></p>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+<div id="footer">
+    {% block footer %}
+    <small><p>This is a footer</p></small>
+    {% endblock %}
+</div>
+</body>
+</html>

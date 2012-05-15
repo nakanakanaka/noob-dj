@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Suites</h1>
+{% if suite_list %}
+    {% for suite in suite_list %}
+        <div class="object_list">
+            <a href=/custs/suite_edit/{{ suite.id }}> {{ suite }}</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No suites have been added yet.</p>
+{% endif %}
+<hr></hr>
+<p><a href="/custs/suite_new">New Suite</a></p>
+{% endblock %}

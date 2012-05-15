@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Bookings</h1>
+{% if booking_list %}
+    {% for booking in booking_list %}
+        <div class="object_list">
+            <a href=/custs/booking_edit/{{ booking.id }}> {{ booking }}</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No bookings have been added yet.</p>
+{% endif %}
+<hr></hr>
+<p><a href="/custs/booking_new">New Booking</a></p>
+{% endblock %}

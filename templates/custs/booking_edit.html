@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Edit Customer</h1>
+<h1>Edit Booking</h1>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="/custs/customer_edit/{{ cust_id }}/" method="post">
+<form action="/custs/booking_edit/{{ booking_id }}/" method="post">
     {% csrf_token %}
-    {{ cust_form.as_p }}
+    {{ booking_form.as_p }}
     <input type="submit" value="Save Changes" />
 </form>
-<p><a href="/custs/customers">Back to customer list</a><p>
+<p><a href="/custs/bookings">Back to booking list</a><p>
 {% endblock %}

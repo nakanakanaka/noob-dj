@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Customers</h1>
+{% if customer_list %}
+    {% for customer in customer_list %}
+        <div class="customer">
+            <a href=/custs/customer_edit/{{ customer.id }}> {{ customer }}</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No customers are available.</p>
+{% endif %}
+<hr></hr>
+<p><a href="/custs/customer_new">New customer</a></p>
+{% endblock %}

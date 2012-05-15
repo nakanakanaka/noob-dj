@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>New Suite</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/custs/suite_new/" method="post">
+    {% csrf_token %}
+    {{ suite_form.as_p }}
+    <input type="submit" value="Save" />
+</form>
+
+<p><a href="/custs/suites/">Cancel</a></p>
+{% endblock %}
